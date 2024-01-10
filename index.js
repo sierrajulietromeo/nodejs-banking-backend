@@ -29,7 +29,7 @@ const db = {
         { id: '3', date: '2023-10-04', object: 'Sandwich', amount: -5 }
       ],
     },
-    jondoe: {
+    steverich: {
         user: 'steverich',
         currency: '£',
         description: `Second test account`,
