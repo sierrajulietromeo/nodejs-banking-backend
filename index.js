@@ -3,6 +3,8 @@
 // https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/7-bank-project/api
 // ***************************************************************************
 
+// Adapted for Ada under terms of MIT licence by Steve
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors')
@@ -18,24 +20,24 @@ const apiPrefix = '/api';
 const db = {
     test: {
       user: 'test',
-      currency: '$',
+      currency: '£',
       description: `Test account`,
       balance: 75,
       transactions: [
-        { id: '1', date: '2020-10-01', object: 'Pocket money', amount: 50 },
-        { id: '2', date: '2020-10-03', object: 'Book', amount: -10 },
-        { id: '3', date: '2020-10-04', object: 'Sandwich', amount: -5 }
+        { id: '1', date: '2023-10-01', object: 'Pocket money', amount: 50 },
+        { id: '2', date: '2023-10-03', object: 'Book', amount: -10 },
+        { id: '3', date: '2023-10-04', object: 'Sandwich', amount: -5 }
       ],
     },
     jondoe: {
-        user: 'jondoe',
-        currency: '$',
+        user: 'steverich',
+        currency: '£',
         description: `Second test account`,
         balance: 150,
         transactions: [
-          { id: '1', date: '2022-10-01', object: 'Gum', amount: -2 },
-          { id: '2', date: '2022-10-03', object: 'Book', amount: -10 },
-          { id: '3', date: '2022-10-04', object: 'Restaurant', amount: -45 }
+          { id: '1', date: '2023-10-01', object: 'Gum', amount: -2 },
+          { id: '2', date: '2023-10-03', object: 'Book', amount: -10 },
+          { id: '3', date: '2023-10-04', object: 'Restaurant', amount: -45 }
         ],
       }
   
@@ -59,7 +61,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/api', function (req, res) {
-    return res.send("Fabrikam Bank API");
+    return res.send("Big Steve's Bank API");
 })
   
 // ----------------------------------------------
